@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:XO"
+             x:Class="XO.MainPage">
+
+    <Grid BackgroundColor="Black" RowSpacing="1" ColumnSpacing="1">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.5*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <StackLayout Grid.Row="0" Grid.Column="0" Orientation="Vertical">
+            <Label FontSize="Medium" VerticalTextAlignment="Center" Text="You (X)" TextColor="Blue" HorizontalTextAlignment="Center" ></Label>
+            <Label FontSize="Medium" VerticalTextAlignment="Center" Text="0" TextColor="Blue" HorizontalTextAlignment="Center" x:Name="X_score" ></Label>
+        </StackLayout>
+
+        <StackLayout Grid.Row="0" Grid.Column="2" Orientation="Vertical">
+            <Label FontSize="Medium" VerticalTextAlignment="Center" Text="Opponent (O)" TextColor="Yellow" HorizontalTextAlignment="Center" ></Label>
+            <Label FontSize="Medium" VerticalTextAlignment="Center" Text="0" TextColor="Yellow" HorizontalTextAlignment="Center" x:Name="O_score" ></Label>
+        </StackLayout>
+
+       
+        
+        <Button BackgroundColor="Gray" FontSize="36" TextColor="Black" Grid.Row="1" Grid.Column="0" Text="" Clicked="Button_Clicked" x:Name="b1"></Button>
+        <Button BackgroundColor="Gray" FontSize="36" TextColor="Black" Grid.Row="1" Grid.Column="1" Text="" Clicked="Button_Clicked" x:Name="b2"></Button>
+        <Button BackgroundColor="Gray" FontSize="36" TextColor="Black" Grid.Row="1" Grid.Column="2" Text="" Clicked="Button_Clicked" x:Name="b3"></Button>
+        
+        <Button BackgroundColor="Gray" FontSize="36" TextColor="Black" Grid.Row="2" Grid.Column="0" Text="" Clicked="Button_Clicked" x:Name="b4"></Button>
+        <Button BackgroundColor="Gray" FontSize="36" TextColor="Black" Grid.Row="2" Grid.Column="1" Text="" Clicked="Button_Clicked" x:Name="b5"></Button>
+        <Button BackgroundColor="Gray" FontSize="36" TextColor="Black" Grid.Row="2" Grid.Column="2" Text="" Clicked="Button_Clicked" x:Name="b6"></Button>
+        
+        <Button BackgroundColor="Gray" FontSize="36" TextColor="Black" Grid.Row="3" Grid.Column="0" Text="" Clicked="Button_Clicked" x:Name="b7"></Button>
+        <Button BackgroundColor="Gray" FontSize="36" TextColor="Black" Grid.Row="3" Grid.Column="1" Text="" Clicked="Button_Clicked" x:Name="b8"></Button>
+        <Button BackgroundColor="Gray" FontSize="36" TextColor="Black" Grid.Row="3" Grid.Column="2" Text="" Clicked="Button_Clicked" x:Name="b9"></Button>
+        
+        <StackLayout Grid.Row="0" Grid.Column="1" x:Name="win_OR_lose" IsVisible="False" Orientation="Vertical">
+            <Label Text="Game Over" FontSize="Medium" TextColor="White" HorizontalTextAlignment="Center"></Label>
+            <Button Text="Play again" FontSize="Micro" Clicked="Button_Clicked_1" ></Button>
+        </StackLayout>
+    </Grid>
+
+</ContentPage>
